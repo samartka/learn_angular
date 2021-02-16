@@ -1,0 +1,13 @@
+*{
+    font-size: large;
+}
+.header{
+    color: red;
+}
+input{
+    width: 25vw;
+
+}
+.addDiv{
+    display:inline
+}

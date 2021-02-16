@@ -1,0 +1,11 @@
+<div>
+    <p>My Tasks today [{{tasks.length}} task(s)]</p>
+    <ul>
+        <li *ngFor="let t of tasks; index as i">{{t}} <button (click)="removetask(i)">-</button></li>
+
+    </ul>
+    <div class="addDiv"> 
+        Task: <input [(ngModel)]="task" />
+        <button (click)="add2tasks()">Add</button>
+    </div>
+</div>
