@@ -1,7 +1,7 @@
 <div>
     <p>My Tasks today [{{tasks.length}} task(s)]</p>
     <ul>
-        <li *ngFor="let t of tasks; index as i">{{t}} </li>
+        <li *ngFor="let t of tasks; index as i">{{t}} <button (click)="removetask(i)">-</button></li>
 
     </ul>
     <div class="addDiv"> 
@@ -9,3 +9,5 @@
         <button (click)="add2tasks()">Add</button>
     </div>
 </div>
+
+

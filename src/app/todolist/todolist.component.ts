@@ -21,6 +21,9 @@ export class ToDoListComponent{
             alert("กรุณาระบุ task")
         }
     }
-
+    removetask(i){
+        this.tasks.splice(i,1)
+    }
 
 }
+
