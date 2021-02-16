@@ -10,7 +10,8 @@ import { Component, Input } from '@angular/core';
 export class CountingComponent{
     @Input()
     count=0;
-
+    isShow = true;
+    items=[1,2,3,4,5,6];
     constructor(){}
     countNumber(){
         this.count = this.count + 1
