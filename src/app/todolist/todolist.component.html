@@ -1,0 +1,27 @@
+<div>
+    <h2>My Tasks today [{{tasks.length}} task(s)]</h2>
+
+
+        <div *ngFor="let t of tasks; index as i" >
+
+            <app-task
+                [task]="t" 
+                [taskindex]="i"
+                (OnRemovetask)="removetask($event)"
+            ></app-task>
+
+        </div>
+
+
+    <div class="addDiv"  style="border: 1px solid blue;">
+
+        <h2 style="margin-left: 20px; margin-bottom: 25px ;">Add task</h2>
+        <div style="margin-left: 46px; margin-bottom: 10px ;">       Name: <input [(ngModel)]="addtask" /></div>
+        <div style="margin-left: 5px;">Description: <input [(ngModel)]="adddescription" /></div>
+        <div>
+            <button class = "center" (click)="add2tasks()">Add</button>
+        </div>
+        
+    </div>
+</div>
+

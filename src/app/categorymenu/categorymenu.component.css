@@ -1,0 +1,22 @@
+
+*{
+
+
+    
+
+}
+.header{
+    color: red;
+}
+li{
+    display: inline-block;
+    text-align: center;
+    border-style: solid;
+    border-width: 0.1ch;
+    margin:1px;
+    padding: 0em; 
+    font-size: large;
+    width: 22vw;
+    height: 50px;
+    
+}
