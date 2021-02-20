@@ -7,6 +7,26 @@
     transform: translate(-50%, -50%); */
   }
 
+  div{
+      background: lightskyblue;
+  }
+
   h4{
       margin: 8px;
   }
+
+  .box {
+    width: 200px;
+    display: inline-block ;
+    border: 1px solid gray;
+    text-align : center;
+    background : beige;
+    }
+
+    .selected {
+    background : lightgrey;
+    }
+
+    .showinfo{
+        background: none;
+    }

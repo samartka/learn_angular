@@ -12,14 +12,26 @@ export class TaskComponent implements OnInit {
   @Input()  taskindex:number;
 
   @Output() OnRemovetask: EventEmitter<number>=new EventEmitter();
+  @Output() OnSelected: EventEmitter<TaskComponent>=new EventEmitter();
 
+  isSelected:boolean;
+  taskName:string;
+  taskDesc:string;
   constructor() { }
 
   ngOnInit() {
+    this.taskName = this.task.name;
+    this.taskDesc = this.task.description;
   }
   
   removetask(){
     this.OnRemovetask.emit(this.taskindex);
     // this.tasks.splice(i,1)
   }
+
+  select(){
+    this.OnSelected.emit(this);
+  }
+
+
 }

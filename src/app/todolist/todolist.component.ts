@@ -1,5 +1,6 @@
-import { Component, OnInit , Input } from '@angular/core';
+import { Component, OnInit , Input ,ViewChild,ViewChildren,QueryList, Output} from '@angular/core';
 import {Task} from '../task'
+import{TaskComponent} from '../task/task.component'
 
 @Component({
     selector:'app-todolist',
@@ -10,9 +11,11 @@ import {Task} from '../task'
 
 export class ToDoListComponent implements OnInit{
     @Input()    tasks:Task[];
+    @ViewChildren(TaskComponent) taskItems: QueryList<TaskComponent>;
 
     addtask:string;
     adddescription:string;
+
 
     constructor(){
         this.tasks =[];
@@ -30,6 +33,22 @@ export class ToDoListComponent implements OnInit{
     removetask(i){
         this.tasks.splice(i,1)
     }
+    
     ngOnInit() {}
+
+
+
+    selectedTask(taskComponent:TaskComponent){
+
+
+        this.taskItems.forEach(p=>{
+            p.isSelected = false;
+        });
+        taskComponent.isSelected = true;
+
+
+    }
+
+
 }
 

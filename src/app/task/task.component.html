@@ -1,4 +1,8 @@
-<div style="border: 1px solid blue;">
-   <h4>Task name : {{ task.name }}</h4>  
+<div (click)="select()" [class.selected] = "isSelected" >
+   <h4 >Task name : {{ task.name }}</h4>  
    <button class="center" (click)="removetask()">-</button>
+</div>
+<div class="showinfo" *ngIf="isSelected">
+    <app-taskinfo [showtaskdesc]="taskDesc" [showtaskname]="taskName"></app-taskinfo>
+
 </div>

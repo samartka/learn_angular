@@ -14,11 +14,12 @@ import { TopBannerComponent } from './topbanner/topbanner.component';
 import { CategoryMenuComponent} from './categorymenu/categorymenu.component';
 import { ToDoListComponent} from './todolist/todolist.component';
 import { TaskComponent } from './task/task.component';
+import { TaskinfoComponent } from './taskinfo/taskinfo.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent, HomeComponent, CountingComponent, Lab4Component, NavBarComponent,SearchBarComponent,TopBannerComponent,CategoryMenuComponent,ToDoListComponent, TaskComponent
+    AppComponent, HomeComponent, CountingComponent, Lab4Component, NavBarComponent,SearchBarComponent,TopBannerComponent,CategoryMenuComponent,ToDoListComponent, TaskComponent, TaskinfoComponent
   ],
   imports: [
     BrowserModule, FormsModule
